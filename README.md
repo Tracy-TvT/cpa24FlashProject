@@ -1,6 +1,19 @@
 # cpa24-Flash-Project
 Budget Tracker System 
 
-Project Overview:
+Team Flash Project Proposal
 
-We propose the development of a comprehensive Expense and Income Tracking Application that empowers users to manage their finances effectively. The application will offer features such as recording daily expenses and income, budget management, savings goal tracking, and detailed transaction history. This project aims to provide users with a user-friendly and intuitive platform to enhance their financial management skills.
+Title: Budget Tracker System
+
+Project Description:
+Our project revolves around creating a robust and user-friendly Budget Tracker application using JavaFX. Managing personal finances is a critical aspect of daily life, and this application is designed to empower users to take control of their finances with ease. The JavaFX Budget Tracker provides a comprehensive yet straightforward solution to track income, expenses, and savings, helping users make informed financial decisions.
+
+Key Features:
+
+1. Expense and Income Tracking: Users can record their daily expenses and income, categorize them, and add detailed descriptions.
+2. Budget Management: The application enables users to set monthly budgets for various expense categories (e.g., groceries, entertainment, rent), and it tracks their progress towards these budget goals.
+3. Savings Goals: Users can create savings goals (e.g., vacation, emergency fund) and allocate funds toward them to stay motivated and achieve financial objectives.
+4. Transaction History: Users can view their complete transaction history, filter it by date or category, and make data-driven financial decisions.
+
+Technological Approach:
+The Budget Tracker application will be developed using JavaFX, a platform-independent and visually appealing framework for creating desktop applications with Java. JavaFX's interactive UI components, charts, and data visualization capabilities will be leveraged to provide an intuitive and engaging user experience.

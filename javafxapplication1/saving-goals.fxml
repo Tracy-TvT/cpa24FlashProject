@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication1.SavingGoalsController">
+    <children>
+      <BorderPane layoutY="84.0" prefHeight="483.0" prefWidth="806.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox alignment="CENTER" prefHeight="355.0" prefWidth="419.0" BorderPane.alignment="CENTER">
+               <children>
+                    <LineChart fx:id="progressChart" prefHeight="474.0" prefWidth="419.0" title="Progress Tracker">
+                        <xAxis>
+                            <CategoryAxis label="Date" />
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis label="Progress Amount" />
+                        </yAxis>
+                    </LineChart>
+               </children>
+            </VBox>
+         </center>
+         <right>
+            <VBox alignment="CENTER" prefHeight="94.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="54.0" prefWidth="150.0" text="Define Goal Progess" />
+                  <TextField fx:id="progressCostTextField" alignment="CENTER" prefWidth="150.0" promptText="Enter Progress Cost" />
+                  <Button fx:id="saveProgressBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Save Progress" />
+               </children>
+            </VBox>
+         </right>
+         <left>
+            <VBox alignment="CENTER" prefHeight="411.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+               <children>
+                    <Label alignment="CENTER" prefHeight="51.0" prefWidth="149.0" text="Define Saving Goals" />
+                    <TextField fx:id="goalTextField" alignment="CENTER" promptText="Enter Goal Name" />
+                    <TextField fx:id="targetCostTextField" alignment="CENTER" promptText="Enter Target Cost" />
+                    <DatePicker fx:id="endPickDate" promptText="Pick End Date" />
+                    <Button fx:id="saveGoalButton" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Save Saving Goal" />
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <ComboBox fx:id="goals_cbox" prefWidth="150.0" promptText="Select Goal" BorderPane.alignment="CENTER" />
+         </top>
+         <bottom>
+            <HBox alignment="CENTER">
+               <children>
+                    <Label fx:id="current_savings_label" alignment="CENTER" prefHeight="44.0" prefWidth="74.0" text="Loading" />
+                    <ProgressBar fx:id="progressBar" prefHeight="46.0" prefWidth="586.0" progress="0.0" />
+                    <Label fx:id="target_savings_label" alignment="CENTER" prefHeight="46.0" prefWidth="66.0" text="Loading" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   
+     </children>
+     
+</AnchorPane>

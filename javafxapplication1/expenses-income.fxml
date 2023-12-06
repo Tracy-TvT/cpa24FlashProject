@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication1.ExpensesIncomeController">
+   <children>
+      <BorderPane prefHeight="483.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox alignment="CENTER">
+               <children>
+                  <BarChart fx:id="recurringChart" prefHeight="405.0" prefWidth="362.0" title="My Expenses">
+                      <xAxis>
+                          <CategoryAxis side="BOTTOM" />
+                      </xAxis>
+                      <yAxis>
+                          <NumberAxis side="LEFT" />
+                      </yAxis>
+                  </BarChart>
+                  <ScatterChart fx:id="incomeScatterChart" prefHeight="405.0" prefWidth="338.0" title="Income">
+                      <xAxis>
+                          <CategoryAxis label="Transaction Descriptions" side="BOTTOM" />
+                      </xAxis>
+                      <yAxis>
+                          <NumberAxis label="Transaction Amounts" side="LEFT" />
+                      </yAxis>
+                  </ScatterChart>
+               </children>
+            </VBox>
+         </center>
+         <right>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="150.0" style="-fx-font-size: 14px;" text="Add new Transaction" />
+                  <ComboBox fx:id="typeComboBox" prefWidth="150.0" promptText="Select Type" />
+                  <ComboBox fx:id="categoryComboBox" prefWidth="150.0" promptText="Select Category" />
+                  <TextField fx:id="amountTextField" promptText="Enter Amount" />
+                  <TextArea fx:id="descriptionTextArea" prefHeight="78.0" prefWidth="148.0" promptText="Enter Description" />
+                  <Button fx:id="saveTransactionButton" alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Save Transaction" />
+               </children>
+            </VBox>
+         </right>
+         <left>
+            <VBox alignment="CENTER" prefHeight="483.0" prefWidth="161.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="164.0" style="-fx-font-size: 12px;" text="Add new Recurring Expenses" />
+                  <ComboBox fx:id="categoryComboBox1" prefHeight="26.0" prefWidth="167.0" promptText="Select Category" />
+                  <TextField fx:id="amountTextField1" promptText="Enter Amount" />
+                  <TextArea fx:id="descriptionTextArea1" prefHeight="78.0" prefWidth="148.0" promptText="Enter Description" />
+                  <DatePicker fx:id="startPickDate" promptText="Pick Start Date" />
+                  <DatePicker fx:id="endPickDate" promptText="Pick End Date" />
+                  <ComboBox fx:id="patternComboBox" prefHeight="26.0" prefWidth="166.0" promptText="Select Pattern" />
+                  <Button fx:id="saveRecurringEnButton" alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="161.0" text="Save Recurring Expense" />
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
